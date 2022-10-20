@@ -1,5 +1,13 @@
 $("#bars").click(function () {
-    console.log($(this));
+    $(".nav-links").toggleClass("mobile-links")
+    $("#close").click(function () {
+        $(".nav-links").removeClass("mobile-links")
+    })
+    if ($(".nav-links").hasClass("mobile-links")) {
+        $(".nav-links #close").empty().prepend(`
+        <i class="fa fa-times" aria-hidden="true"></i>
+        `)
+    }
 })
 $("button").click(function () {
     console.log("Yeah");
