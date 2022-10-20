@@ -1,0 +1,36 @@
+header {
+    width          : 100%;
+    height         : 60px;
+    display        : flex;
+    justify-content: center;
+    background     : $secondaryColor;
+    padding        : 10px;
+    position       : relative;
+
+    nav {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        width          : 90%;
+        margin         : auto;
+
+        .nav-links {
+            width     : 100vw;
+            top       : 0;
+            right     : 0;
+            position  : absolute;
+            height    : 100vh;
+            translate : 150% 0;
+            background: $primaryColor;
+        }
+
+        .toggler {
+            #bars {
+                .fa-bars {
+                    color : $accent;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
