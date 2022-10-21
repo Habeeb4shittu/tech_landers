@@ -5,7 +5,7 @@ $("#bars").click(function () {
     })
     if ($(".nav-links").hasClass("mobile-links")) {
         $(".nav-links #close").empty().prepend(`
-        <i class="fa fa-times" aria-hidden="true"></i>
+        <i class="fa fa-times" aria-hidden="true" id="times"></i>
         `)
     }
 })

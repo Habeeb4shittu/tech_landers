@@ -4,7 +4,8 @@ header {
     display        : flex;
     justify-content: center;
     background     : $secondaryColor;
-    padding        : 10px;
+    padding        : 0 10px;
+    align-items    : center;
     position       : relative;
 
     nav {
@@ -14,35 +15,49 @@ header {
         width          : 90%;
         margin         : auto;
 
+        @media screen and (min-width:$lgscreen) {
+            align-items    : center;
+            justify-content: space-between;
+        }
+
         .nav-links {
-            width     : 100vw;
-            padding   : 10px;
-            top       : 0;
-            right     : 0;
-            position  : absolute;
-            height    : 100vh;
-            transition: 1s;
-            translate : 150% 0;
-            background: $primaryColor;
+            width          : 100%;
+            padding        : 10px;
+            top            : 0;
+            right          : 0;
+            position       : absolute;
+            height         : 100%;
+            transition     : .5s;
+            translate      : 150% 0;
+            background     : linear-gradient(to top, $primaryColor, $secondaryColor 50%, $primaryColor);
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
 
-            #close {
-                align-self: flex-end;
-                cursor    : pointer;
-
-                .fa-times {
-                    color: $accent;
-                }
+            @media screen and (min-width:$lgscreen) {
+                translate : 0 0;
+                background: none;
+                padding   : 0;
+                height    : 100%;
+                width     : fit-content;
+                position  : static;
             }
+
 
             ul {
                 display        : flex;
                 flex-direction : column;
                 align-items    : center;
                 width          : 100%;
-                padding-right  : 0;
-                height         : 90vh;
-                border         : 2px solid red;
+                height         : 100%;
                 justify-content: center;
+
+                @media screen and (min-width:$lgscreen) {
+                    flex-direction: row;
+                    height        : 100%;
+
+                    gap: 120px;
+                }
 
                 li {
                     list-style: none;
@@ -51,23 +66,47 @@ header {
                     a {
                         text-decoration: none;
                         font-size      : 1.5rem;
-                        color          : $secondaryColor;
+                        color          : $accent;
+
+                        @media screen and (min-width:$lgscreen) {
+                            color    : $accent;
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
 
             &.mobile-links {
-                translate      : 0;
+                translate      : 0 0;
                 display        : flex;
                 flex-direction : column;
                 justify-content: center;
+                height         : 100vh;
                 width          : 100%;
+                padding        : 10px !important;
                 align-items    : center;
 
+                #close {
+                    align-self: flex-end;
+                    cursor    : pointer;
+
+                    @media screen and (min-width:$lgscreen) {
+                        display: none;
+
+                    }
+
+                    #times {
+                        color: $accent;
+                    }
+                }
             }
         }
 
         .toggler {
+            @media screen and (min-width:$lgscreen) {
+                display: none;
+            }
+
             #bars {
                 .fa-bars {
                     color : $accent;
