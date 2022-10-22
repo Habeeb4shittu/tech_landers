@@ -82,7 +82,7 @@ header {
                 display        : flex;
                 flex-direction : column;
                 justify-content: center;
-                height         : 100vh;
+                height         : 100vh !important;
                 width          : 100%;
                 padding        : 10px !important;
                 align-items    : center;
