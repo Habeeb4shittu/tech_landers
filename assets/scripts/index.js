@@ -9,11 +9,6 @@ $("#bars").click(function () {
         `)
     }
 })
-$(document).ready(function () {
-    if ($(".nav-links").hasClass("mobile-links")) {
-        $(".nav-links").removeClass("mobile-links")
-    }
-})
 ScrollReveal().reveal('.brand', { delay: 500, origin: 'left', distance: '200%' })
 ScrollReveal().reveal('.toggler', { delay: 500, origin: 'right', distance: '200%' })
 ScrollReveal().reveal('.home-link', { delay: 600, origin: 'top', distance: '200%', ease: 'ease-in' })
