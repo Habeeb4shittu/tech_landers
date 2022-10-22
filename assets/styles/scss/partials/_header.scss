@@ -30,13 +30,14 @@ header {
             height         : 100%;
             translate      : 150% 0;
             background     : linear-gradient(to top, $primaryColor, $secondaryColor 50%, $primaryColor);
-            display        : flex;
+            display        : none;
             align-items    : center;
             justify-content: center;
 
             @media screen and (min-width:$lgscreen) {
                 translate : 0 0;
                 background: none;
+                display   : flex;
                 padding   : 0;
                 height    : 100%;
                 width     : fit-content;
