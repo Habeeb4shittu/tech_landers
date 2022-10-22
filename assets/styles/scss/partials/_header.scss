@@ -28,7 +28,6 @@ header {
             right          : 0;
             position       : absolute;
             height         : 100%;
-            transition     : 1s;
             translate      : 150% 0;
             background     : linear-gradient(to top, $primaryColor, $secondaryColor 50%, $primaryColor);
             display        : flex;
@@ -78,41 +77,59 @@ header {
                 }
             }
 
-            &.mobile-links {
-                translate      : 0;
-                display        : flex;
-                flex-direction : column;
-                justify-content: center;
-                height         : 100vh;
-                width          : 100%;
-                padding        : 10px !important;
-                align-items    : center;
+        }
+
+        .mobile-links {
+            translate      : 150% 0;
+            display        : none;
+            background     : linear-gradient(to top, $primaryColor, $secondaryColor, $primaryColor);
+            flex-direction : column;
+            position       : absolute;
+            left           : 0;
+            top            : 0;
+            justify-content: center;
+            height         : 100vh;
+            padding        : 10px !important;
+            width          : 100vw;
+            align-items    : center;
+            transition     : 2s;
+
+            @media screen and (min-width:$lgscreen) {
+                display: none;
+            }
+
+            &.active {
+                translate: 0 0;
+                display  : flex;
 
                 ul {
+                    list-style: none;
+
                     li {
 
-                        .home-link {
-                            // background-color: pink;
-                            opacity  : 1 !important;
-                            transform: none !important;
+                        a {
+                            color          : $accent !important;
+                            text-decoration: none;
                         }
                     }
                 }
+            }
 
-                #close {
-                    align-self: flex-end;
-                    cursor    : pointer;
 
-                    @media screen and (min-width:$lgscreen) {
-                        display: none;
+        }
 
-                    }
+        #close {
+            align-self: flex-end;
+            cursor    : pointer;
 
-                    #times {
-                        font-size: 1.5rem;
-                        color    : $accent;
-                    }
-                }
+            @media screen and (min-width:$lgscreen) {
+                display: none;
+
+            }
+
+            #times {
+                font-size: 1.5rem;
+                color    : $accent;
             }
         }
 

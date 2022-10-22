@@ -1,13 +1,8 @@
 $("#bars").click(function () {
-    $(".nav-links").toggleClass("mobile-links")
+    $(".mobile-links").toggleClass("active")
     $("#close").click(function () {
-        $(".nav-links").removeClass("mobile-links")
+        $(".mobile-links").removeClass("active")
     })
-    if ($(".nav-links").hasClass("mobile-links")) {
-        $(".nav-links #close").empty().prepend(`
-        <i class="fa fa-times" aria-hidden="true" id="times"></i>
-        `)
-    }
 })
 ScrollReveal().reveal('.brand', { delay: 500, origin: 'left', distance: '200%' })
 ScrollReveal().reveal('.toggler', { delay: 500, origin: 'right', distance: '200%' })
