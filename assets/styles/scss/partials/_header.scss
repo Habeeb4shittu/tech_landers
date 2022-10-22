@@ -27,7 +27,7 @@ header {
             right          : 0;
             position       : absolute;
             height         : 100%;
-            transition     : .5s;
+            transition     : 1s;
             translate      : 150% 0;
             background     : linear-gradient(to top, $primaryColor, $secondaryColor 50%, $primaryColor);
             display        : flex;
@@ -67,6 +67,7 @@ header {
                         text-decoration: none;
                         font-size      : 1.5rem;
                         color          : $accent;
+                        display        : block;
 
                         @media screen and (min-width:$lgscreen) {
                             color    : $accent;
@@ -77,7 +78,7 @@ header {
             }
 
             &.mobile-links {
-                translate      : 0 0;
+                translate      : 0;
                 display        : flex;
                 flex-direction : column;
                 justify-content: center;
@@ -85,6 +86,17 @@ header {
                 width          : 100%;
                 padding        : 10px !important;
                 align-items    : center;
+
+                ul {
+                    li {
+
+                        .home-link {
+                            // background-color: pink;
+                            opacity  : 1 !important;
+                            transform: none !important;
+                        }
+                    }
+                }
 
                 #close {
                     align-self: flex-end;
@@ -96,7 +108,8 @@ header {
                     }
 
                     #times {
-                        color: $accent;
+                        font-size: 1.5rem;
+                        color    : $accent;
                     }
                 }
             }
