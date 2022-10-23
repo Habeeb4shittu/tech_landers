@@ -9,6 +9,7 @@
   <!-- <link rel="stylesheet" href="http://localhost:10/fontawesome6/css/all.min.css"> -->
   <!-- <link rel="stylesheet" href="./assets/styles/css/all.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/styles/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/styles/css/style.css">
 </head>
 
@@ -26,7 +27,34 @@
   <div class="toggler">
     <span class="bar"><i class="fa fa-bars" aria-hidden="true"></i></span>
   </div>
-
+  <main>
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img src="./assets/images/pexels-antony-trivet-12941578.jpg" class="w-100 d-block" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/pexels-christina-morillo-1181243.jpg" class="w-100 d-block" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/pexels-christina-morillo-1181280.jpg" class="w-100 d-block" alt="Third slide">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </main>
   <!-- <script src="http://localhost:10/fontawesome6/js/all.min.js"></script> -->
   <!-- <script src="./assets/scripts/all.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -36,6 +64,7 @@
   <!-- <script src="http://localhost:10/scroll-reveal.js"></script> -->
   <!-- <script src="./assets/scripts/scroll-reveal.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.0.0/scrollReveal.js" integrity="sha512-C5vaj0THdudBZn7DvfkEb/Bt12RDCn2oPOyWN1bsH6NPSw4xJ1eA8NE5QsgURl6cCAd7pvvqtrums8iGcoJU6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/scripts/bootstrap.min.js"></script>
   <script src="./assets/scripts/index.js"></script>
 </body>
 
