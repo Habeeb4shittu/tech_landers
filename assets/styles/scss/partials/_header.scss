@@ -1,7 +1,7 @@
 nav {
     width        : 100%;
     height       : 100vh;
-    translate    : -150% 0;
+    transform    : translateX(-150%);
     // display   : none;
     position     : fixed;
     z-index      : 3;
@@ -40,7 +40,7 @@ nav {
     }
 
     &.active {
-        translate   : 0 0;
+        transform   : translateX(0);
         // display  : block;
     }
 }
